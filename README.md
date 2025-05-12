@@ -8,7 +8,12 @@ cd ~/.config/nvim/lua
 git clone https://github.com/JHerget/neovim-config.git
 ```
 
-2. Install Hack nerd font (optional)
+2. Install Dependencies
+```
+brew install ripgrep
+```
+
+3. Install Hack nerd font (optional)
 
 ## Setup
 1. Import files in `init.lua`
