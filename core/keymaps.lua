@@ -26,16 +26,20 @@ vim.keymap.set("n", "<leader><Down>", "<C-w>j") -- move down a window
 vim.keymap.set("n", "<leader><Up>", "<C-w>k") -- move up a window
 vim.keymap.set("n", "<leader><Right>", "<C-w>l") -- move right a window
 
--- plugin keymaps
 vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize/minimize a window
-vim.keymap.set("n", "<leader>e" ,":NvimTreeToggle<CR>") -- open/close file tree
 
-local builtin = require('telescope.builtin')
-vim.keymap.set("n", "<C-p>", builtin.find_files) -- search files
-vim.keymap.set("n", "<leader>fg", builtin.live_grep) -- search for a string in the cwd
-vim.keymap.set("n", "<leader>fb", builtin.buffers)
-vim.keymap.set("n", "<leader>fh", builtin.help_tags)
-vim.keymap.set("n", "<leader>en", function() -- find files in the nvim config directory
-    builtin.find_files { cwd = vim.fn.stdpath("config") }
+-- terminal keymaps
+vim.api.nvim_create_autocmd("TermOpen", {
+    group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
+    callback = function()
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+    end,
+})
+
+vim.keymap.set("n", "<leader>st", function()
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 15)
 end)
-vim.keymap.set("n", "<leader>fc", builtin.grep_string) -- search files for the selected string
