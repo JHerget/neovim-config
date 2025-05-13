@@ -13,15 +13,13 @@ return {
     },
     config = function()
         require("luasnip.loaders.from_vscode").lazy_load()
-        
+
         local cmp = require('cmp')
-            
+
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    -- first try LuaSnip
                     luasnip.lsp_expand(args.body)
-                    -- then try vim-vsnip
                     vim.fn["vsnip#anonymous"](args.body)
                 end,
             },

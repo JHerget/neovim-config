@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader><Right>", "<C-w>l") -- move right a window
 vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize/minimize a window
 
 -- terminal keymaps
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>") -- escape terminal mode
+vim.keymap.set("t", "jk", "<C-\\><C-n>") -- escape terminal mode with jk
+
 vim.api.nvim_create_autocmd("TermOpen", {
     group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
     callback = function()
