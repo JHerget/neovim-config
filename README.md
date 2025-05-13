@@ -18,15 +18,17 @@ brew install ripgrep
 ## Setup
 1. Import files in `init.lua`
 ```
-require('jherget.plugins-setup')
+require('jherget.plugins-setup')'
 require('jherget.core.options')
 require('jherget.core.keymaps')
 ```
 
-2. Setup GitHub Copilot in NeoVim
-```
-:Copilot setup
-```
+2. Setup GitHub Copilot
+    * In NeoVim, setup Copilot
+        ```
+        :Copilot setup
+        ```
+    * Install [Node.js](https://nodejs.org/en/download/) (if not already installed)
 
 3. Set NeoVim as Default Git Editor (optional)
 ```
