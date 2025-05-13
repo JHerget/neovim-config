@@ -27,3 +27,8 @@ require('jherget.core.keymaps')
 ```
 :Copilot setup
 ```
+
+3. Set NeoVim as Default Git Editor (optional)
+```
+git config --global core.editor "nvim"
+```
