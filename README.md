@@ -22,3 +22,8 @@ require('jherget.plugins-setup')
 require('jherget.core.options')
 require('jherget.core.keymaps')
 ```
+
+2. Setup GitHub Copilot in NeoVim
+```
+:Copilot setup
+```
