@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 
 -- general keymaps
-vim.keymap.set("n", "x", "_x") -- remove character but don't save it to the buffer
-
 vim.keymap.set("i", "jk", "<ESC>") -- escape insert mode with 
 
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>") -- get rid of highlights
@@ -46,3 +44,6 @@ vim.keymap.set("n", "<leader>st", function()
     vim.cmd.wincmd("J")
     vim.api.nvim_win_set_height(0, 15)
 end)
+
+-- LSP keymaps
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
