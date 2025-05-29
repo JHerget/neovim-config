@@ -56,6 +56,7 @@ return {
                 "sqlls",
                 "terraformls",
                 "eslint",
+                "ts_ls",
                 "pyright",
                 "html",
                 "cssls",

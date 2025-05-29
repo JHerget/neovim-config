@@ -24,7 +24,13 @@ vim.keymap.set("n", "<leader><Down>", "<C-w>j") -- move down a window
 vim.keymap.set("n", "<leader><Up>", "<C-w>k") -- move up a window
 vim.keymap.set("n", "<leader><Right>", "<C-w>l") -- move right a window
 
+-- vim.keymap.set("n", "<leader>w<Left>", ":resize -1<CR>") -- -1 window width
+-- vim.keymap.set("n", "<leader>w<Down>", ":vertical resize -1<CR>") -- -1 window height
+-- vim.keymap.set("n", "<leader>w<Up>", ":vertical resize +1<CR>") -- +1 window height
+-- vim.keymap.set("n", "<leader>w<Right>", ":resize +1<CR>") -- +1 window width
+
 vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize/minimize a window
+vim.keymap.set("n", "<C-x>", ":bd<CR>") -- close current buffer
 
 -- terminal keymaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>") -- escape terminal mode
