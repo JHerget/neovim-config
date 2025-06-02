@@ -24,12 +24,12 @@ return {
                 end,
             },
             mapping = {
-                ["<C-n>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-                ["<C-o>"] = cmp.mapping.select_next_item(), -- next suggestion
+                ["<C-o>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+                ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
                 ["<C-e>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-i>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestion
-                ["<C-e>"] = cmp.mapping.abort(), -- close completion window 
+                -- ["<C-e>"] = cmp.mapping.abort(), -- close completion window 
                 ["<CR>"] = cmp.mapping.confirm({ select = false }),
             },
             sources = cmp.config.sources({
