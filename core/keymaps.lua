@@ -29,27 +29,7 @@ vim.keymap.set("n", "<leader><Right>", "<C-w>l") -- move right a window
 -- vim.keymap.set("n", "<leader>w<Up>", ":vertical resize +1<CR>") -- +1 window height
 -- vim.keymap.set("n", "<leader>w<Right>", ":resize +1<CR>") -- +1 window width
 
-vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximize/minimize a window
 vim.keymap.set("n", "<C-x>", ":bd<CR>") -- close current buffer
-
--- terminal keymaps
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>") -- escape terminal mode
-vim.keymap.set("t", "jk", "<C-\\><C-n>") -- escape terminal mode with jk
-
-vim.api.nvim_create_autocmd("TermOpen", {
-    group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
-    callback = function()
-        vim.opt.number = false
-        vim.opt.relativenumber = false
-    end,
-})
-
-vim.keymap.set("n", "<leader>st", function()
-    vim.cmd.vnew()
-    vim.cmd.term()
-    vim.cmd.wincmd("J")
-    vim.api.nvim_win_set_height(0, 15)
-end)
 
 -- LSP keymaps
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
