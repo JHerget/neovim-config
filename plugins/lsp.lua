@@ -63,6 +63,7 @@ return {
                 "intelephense",
                 "yamlls",
                 "lua_ls",
+                "ocamllsp",
             },
             automatic_installation = true,
         })
