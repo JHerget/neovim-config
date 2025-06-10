@@ -33,3 +33,4 @@ vim.keymap.set("n", "<C-x>", ":bd<CR>") -- close current buffer
 
 -- LSP keymaps
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>sd', vim.diagnostic.open_float)
