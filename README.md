@@ -9,28 +9,22 @@ git clone https://github.com/JHerget/neovim-config.git
 ```
 
 2. Install Dependencies
-```
-brew install ripgrep
-```
+    * [Install brew](https://brew.sh/)
+    * `brew install ripgrep`
+    * `brew install cmake`
+    * `brew install tree-sitter-cli`
 
 3. Install Hack nerd font (optional)
 
 ## Setup
-1. Import files in `init.lua`
+1. In `~/.config/nvim/` create a file `init.lua` that contains:
 ```
-require('jherget.plugins-setup')'
-require('jherget.core.options')
-require('jherget.core.keymaps')
+require('neovim-config.plugins-setup')
+require('neovim-config.core.options')
+require('neovim-config.core.keymaps')
 ```
 
-2. Setup GitHub Copilot
-    * In NeoVim, setup Copilot
-        ```
-        :Copilot setup
-        ```
-    * Install [Node.js](https://nodejs.org/en/download/) (if not already installed)
-
-3. Set NeoVim as Default Git Editor (optional)
+2. Set NeoVim as Default Git Editor (optional)
 ```
 git config --global core.editor "nvim"
 ```

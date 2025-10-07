@@ -48,7 +48,7 @@ return {
 
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "csharp_ls",
+                -- "csharp_ls",
                 "dockerls",
                 "jsonls",
                 "grammarly",
@@ -63,12 +63,12 @@ return {
                 "intelephense",
                 "yamlls",
                 "lua_ls",
-                "ocamllsp",
+                -- "ocamllsp",
             },
             automatic_installation = true,
         })
 
-        require("lspconfig").sourcekit.setup({
+        vim.lsp.config("sourcekit", {
             capabilities = {
                 workspace = {
                     didChangeWatchedFiles = {
