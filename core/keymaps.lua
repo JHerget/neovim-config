@@ -39,29 +39,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.lsp.buf.format()
     end,
 })
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = {
-    "bash",
-    "c_sharp",
-    "css",
-    "csv",
-    "dockerfile",
-    "go",
-    "html",
-    "http",
-    "javascript",
-    "json",
-    "lua",
-    "php",
-    "python",
-    "regex",
-    "sql",
-    "swift",
-    "typescript",
-    "yaml",
-  },
-  callback = function(args)
-    pcall(vim.treesitter.start, args.buf)
-  end,
-})
