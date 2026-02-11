@@ -58,6 +58,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "regex",
     "sql",
     "swift",
+    "typescript",
     "yaml",
   },
   callback = function(args)
