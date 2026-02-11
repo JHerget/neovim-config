@@ -13,15 +13,16 @@ git clone https://github.com/JHerget/neovim-config.git
     * `brew install ripgrep`
     * `brew install cmake`
     * `brew install tree-sitter-cli`
+    * `brew install unzip`
 
 3. Install Hack nerd font (optional)
 
 ## Setup
 1. In `~/.config/nvim/` create a file `init.lua` that contains:
 ```
-require('neovim-config.plugins-setup')
-require('neovim-config.core.options')
-require('neovim-config.core.keymaps')
+require("neovim-config.plugins-setup")
+require("neovim-config.core.options")
+require("neovim-config.core.keymaps")
 ```
 
 2. Set NeoVim as Default Git Editor (optional)
